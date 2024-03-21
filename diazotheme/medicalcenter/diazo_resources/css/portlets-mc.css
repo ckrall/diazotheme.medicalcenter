@@ -1,0 +1,147 @@
+/* Custom Portlets */
+.portletStaticText.portlet-icon /*dd*/.portletItem,
+.portlet-static-appointments /*dd*/.portletItem,
+.portlet-static-clinical-trials /*dd*/.portletItem,
+.portlet-static-tools-calculators /*dd*/.portletItem,
+.portlet-static-club-red /*dd*/.portletItem,
+.portlet-static-gift /*dd*/.portletItem,
+.portletRss .portletItem { width:75%; font-size:12px; font-size:1.2rem; }
+
+
+
+/* Make an Appointment */
+.portletStaticText /*dt*/.portletHeader.appointments,
+#portal-column-two .portlet-static-appointments /*dt*/.portletHeader,
+#portal-column-content .portlet-static-appointments /*dt*/.portletHeader { background-color:#266999;}
+.portletStaticText /*dt*/.portletHeader.appointments .portletTopRight,
+.portlet-static-appointments /*dt*/.portletHeader .portletTopRight { position:absolute; right:20px; top:14px; display:block; }
+
+
+
+/* Clinical Trials */
+.portletStaticText /*dt*/.portletHeader.clinical-trials,
+#portal-column-two .portlet-static-clinical-trials /*dt*/.portletHeader,
+#portal-column-content .portlet-static-clinical-trials /*dt*/.portletHeader { background-color:#4786B3; }
+.portletStaticText /*dt*/.portletHeader.clinical-trials .portletTopRight,
+.portlet-static-clinical-trials /*dt*/.portletHeader .portletTopRight { position:absolute; right:20px; top:14px; display:block; }
+
+
+
+/* Tools & Calculators */
+.portletStaticText /*dt*/.portletHeader.tools-calculators,
+#portal-column-two .portlet-static-tools-calculators .portletHeader,
+#portal-column-content .portlet-static-tools-calculators .portletHeader { background-color:#6CACD9; }
+.portletStaticText /*dt*/.portletHeader.tools-calculators .portletTopRight,
+.portlet-static-tools-calculators .portletHeader .portletTopRight { position:absolute; right:20px; top:14px; display:block; }
+
+
+
+/* For Find a Doctor CFM App */
+.portletStaticText /*dt*/.portletHeader.findDoc { margin-bottom:45px; margin-bottom:4.5rem; background-color:#D84B16; }
+.portletStaticText /*dt*/.portletHeader.findDoc .portletTopRight { position:absolute; right:20px; top:14px; display:block; }
+     .portletStaticText /*dd*/.portletItem.doctor { margin:10px 0 0; width:auto; }
+		.portletStaticText /*dd*/.portletItem.doctor #doctorSearch { width:90%; margin-bottom:20px; margin-bottom:2rem; }
+
+.portletStaticText /*dt*/.portletHeader.clinical-interests { background-color:#266999; }
+.portletStaticText /*dt*/.portletHeader.clinical-interests .portletTopRight { position:absolute; right:20px; top:14px; display:block; }
+
+.portletStaticText /*dt*/.portletHeader.research-interests { background-color:#4786B3; }
+.portletStaticText /*dt*/.portletHeader.research-interests .portletTopRight { position:absolute; right:20px; top:14px; display:block; }
+
+.portletStaticText /*dt*/.portletHeader.education { background-color:#6CACD9; }
+.portletStaticText /*dt*/.portletHeader.education .portletTopRight { position:absolute; right:20px; top:14px; display:block; }
+
+
+
+/* Club Red */
+.portletStaticText /*dt*/.portletHeader.club-red,
+#portal-column-two .portlet-static-club-red .portletHeader,
+#portal-column-content .portlet-static-club-red .portletHeader { background-color:#C60C30; }
+.portletStaticText /*dt*/.portletHeader.club-red .portletTopRight,
+.portlet-static-club-red .portletHeader .portletTopRight { position:absolute; right:20px; top:14px; display:block; }
+
+
+
+/* Images & Videos */
+.portletStaticText /*dt*/.portletHeader.images-video,
+#portal-column-two .portlet-static-images-video .portletHeader,
+#portal-column-content .portlet-static-images-video .portletHeader { background-color:#4786B3; }
+.portletStaticText /*dt*/.portletHeader.images-video .portletTopRight,
+.portlet-static-images-video .portletHeader .portletTopRight { position:absolute; right:20px; top:14px; display:block; }
+#portal-column-two .portlet-static-images-video /*dd*/.portletItem,
+#portal-column-content .portlet-static-images-video /*dd*/.portletItem { margin:0; }
+#portal-column-two .portlet-static-images-video /*dd*/.portletItem p,
+#portal-column-content .portlet-static-images-video /*dd*/.portletItem p { margin-top:0; }
+
+
+
+/* PortletRss */
+#portal-column-two .portletRss .portletHeader,
+#portal-column-content .portletRss .portletHeader { background-color:#6CACD9; }
+.portletRss .portletHeader .portletTopRight { position:absolute; right:20px; top:14px; display:block; }
+.portletRss .portletItemDetails { display:block; color:#CCCCCC; }
+.portletRss .portletFooter { display:none; }
+
+
+
+/* Gift Icon - Static Stylish Text Portlet */
+#portal-column-two .portlet-static-gift .portletHeader,
+#portal-column-content .portlet-static-gift .portletHeader { background-color:#6CACD9!important; }/*to override screen-childrens.css for children's site only*/
+#portal-column-two .portlet-static-gift .portletHeader .portletTopRight,
+#portal-column-content .portlet-static-gift .portletHeader .portletTopRight  { position:absolute; right:20px; top:14px; display:block; }
+
+/* News & Announcements Icon - Static Stylish Text Portlet */
+#portal-column-two .portlet-static-news .portletHeader,
+#portal-column-content .portlet-static-news .portletHeader { background-color:#6CACD9!important; }/*to override screen-childrens.css for children's site only*/
+#portal-column-two .portlet-static-news .portletHeader .portletTopRight,
+#portal-column-content .portlet-static-news .portletHeader .portletTopRight  { position:absolute; right:20px; top:14px; display:block; }
+
+/* Blog Icon - Static Stylish Text Portlet */
+#portal-column-two .portlet-static-blog .portletHeader,
+#portal-column-content .portlet-static-blog .portletHeader { background-color:#6CACD9!important; }/*to override screen-childrens.css for children's site only*/
+#portal-column-two .portlet-static-blog .portletHeader .portletTopRight,
+#portal-column-content .portlet-static-blog .portletHeader .portletTopRight  { position:absolute; right:20px; top:14px; display:block; }
+
+/* Pay Your Bill Icon - Static Stylish Text Portlet */
+#portal-column-two .portlet-static-paybill .portletHeader,
+#portal-column-content .portlet-static-paybill .portletHeader { background-color:#6CACD9!important; }/*to override screen-childrens.css for children's site only*/
+#portal-column-two .portlet-static-paybill .portletHeader .portletTopRight,
+#portal-column-content .portlet-static-paybill .portletHeader .portletTopRight { position:absolute; right:20px; top:14px; display:block; }
+
+/* Locations Icon - Static Stylish Text Portlet */
+#portal-column-two .portlet-static-locations .portletHeader,
+#portal-column-content .portlet-static-locations .portletHeader { background-color:#6CACD9!important; }/*to override screen-childrens.css for children's site only*/
+#portal-column-two .portlet-static-locations .portletHeader .portletTopRight,
+#portal-column-content .portlet-static-locations .portletHeader .portletTopRight  { position:absolute; right:20px; top:14px; display:block; }
+
+
+
+/* Fancy Menu - Portlet */
+#portal-column-two .portletStaticText.portlet-static-fancy-menu /*dt*/.portletHeader,
+#portal-column-content .portletStaticText.portlet-static-fancy-menu /*dt*/.portletHeader { padding:10px; padding:1rem; color:#005789; font-size:30px; font-size:3rem; font-family:Georgia, serif; font-variant:small-caps; line-height:100%;
+																						   background-color:transparent; border-top:3px solid #d9d5c3; }
+#portal-column-two .portletStaticText.portlet-static-fancy-menu .portletItem,
+#portal-column-content .portletStaticText.portlet-static-fancy-menu .portletItem { margin:15px 0 0; }
+#portal-column-two .portletStaticText.portlet-static-fancy-menu ul,
+#portal-column-content .portletStaticText.portlet-static-fancy-menu ul { list-style-type:none; margin:0; padding:0; }
+	#portal-column-two .portletStaticText.portlet-static-fancy-menu ul li,
+	#portal-column-content .portletStaticText.portlet-static-fancy-menu ul li { margin-bottom:0; font-size:14px; font-size:1.4rem; font-family:Verdana, serif; border-bottom:1px solid #E7E7E7; }
+		#portal-column-two .portletStaticText.portlet-static-fancy-menu ul li:last-child,
+		#portal-column-content .portletStaticText.portlet-static-fancy-menu ul li:last-child { border:none; }
+			#portal-column-two .portletStaticText.portlet-static-fancy-menu ul li a,
+			#portal-column-content .portletStaticText.portlet-static-fancy-menu ul li a { display:block; padding:5px 10px; padding:0.5rem 1rem; border-bottom:none; }
+				#portal-column-two .portletStaticText.portlet-static-fancy-menu ul li a:hover,
+				#portal-column-content .portletStaticText.portlet-static-fancy-menu ul li a:hover { background:#F7F7F7; }
+
+
+/* Content Well Portlets using the Custom Static Text Portlets */
+.BelowPortletManager1.position-0 { margin-left:-99.875%; }
+.BelowPortletManager2.position-1\:2 { margin-left:-49.875%; }
+
+#portal-column-content .portlet-static-images-video /*dd*/.portletItem,
+#portal-column-content .portlet-static-images-video /*dd*/.portletFooter { margin:0; }
+#portal-column-content .portlet-static-images-video /*dd*/.portletItem p { margin:0; }
+
+/* Object Embed Video in portlet and main content */
+.portlet object,
+.portlet embed  { position: relative; top: 0; left: 0; width: 100%; height: 100%; }

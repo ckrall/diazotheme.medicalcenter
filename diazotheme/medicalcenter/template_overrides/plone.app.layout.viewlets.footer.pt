@@ -1,0 +1,122 @@
+<div i18n:domain="plone"
+     id="portal-footer">
+
+	<div class="footer-identity">
+
+		<div class="org"><span tal:content="context/footer/footer_heading" /></div>
+		<!--
+		<div class="social-footer">
+			<a class="rss" tal:condition="context/footer/social_rss" tal:attributes="href string:${context/footer/social_rss}" title="RSS"><span class="visuallyhidden">RSS</span></a>
+			<a class="facebook" tal:condition="context/footer/social_facebook" tal:attributes="href string:${context/footer/social_facebook}" title="facebook"><span class="visuallyhidden">Facebook</span></a>
+			<a class="google" tal:condition="context/footer/social_google" tal:attributes="href string:${context/footer/social_google}" title="google"><span class="visuallyhidden">Google+</span></a>
+			<a class="twitter" tal:condition="context/footer/social_twitter" tal:attributes="href string:${context/footer/social_twitter}" title="twitter"><span class="visuallyhidden">Twitter</span></a>
+			<a class="pinterest" tal:condition="context/footer/social_pinterest" tal:attributes="href string:${context/footer/social_pinterest}" title="pinterest"><span class="visuallyhidden">Pinterest</span></a>
+			<a class="youtube" tal:condition="context/footer/social_youtube" tal:attributes="href string:${context/footer/social_youtube}" title="youtube"><span class="visuallyhidden">YouTube</span></a>
+			<a class="email" tal:condition="context/footer/social_email" tal:attributes="href string:${context/footer/social_email}" title="email"><span class="visuallyhidden">Email</span></a>
+			<a class="location" tal:condition="context/footer/social_location" tal:attributes="href string:${context/footer/social_location}" title="location"><span class="visuallyhidden">Location</span></a>
+			<a class="phone" tal:condition="context/footer/social_phone" tal:attributes="href string:${context/footer/social_phone}" title="phone"><span class="visuallyhidden">Phone</span></a>
+		</div>
+		-->
+	    <address class="address-footer">
+
+	        <div class="add">
+	            <span class="street-address" tal:content="context/footer/address_street" />, 
+	            <span class="locality" tal:content="context/footer/address_city" />, 
+	            <span class="region" tal:content="context/footer/address_state" /> 
+	            <span class="postal-code" tal:content="context/footer/address_zipcode" />
+	        </div>
+
+	        <div class="tel">
+	            <span class="local" tal:condition="context/footer/phone_tel">TEL: <a href="#" tal:condition="context/footer/phone_tel" tal:attributes="href string:tel:${context/footer/phone_tel}"><span tal:content="context/footer/phone_tel" /></a></span>
+	            <span class="fax" tal:condition="context/footer/phone_fax">FAX: <a href="#" tal:condition="context/footer/phone_fax" tal:attributes="href string:tel:${context/footer/phone_fax}"><span tal:content="context/footer/phone_fax" /></a></span>
+	            <span class="tdd" tal:condition="context/footer/phone_tdd">TDD: <a href="#" tal:condition="context/footer/phone_tdd" tal:attributes="href string:tel:${context/footer/phone_tdd}"><span tal:content="context/footer/phone_tdd" /></a></span>
+	        </div>
+
+	        <div class="webemail" tal:condition="context/footer/contact_form">Maintained by: <a href="#" tal:condition="context/footer/contact_form" tal:attributes="href string:${context/footer/contact_form}"><span tal:content="context/footer/contact_name" /></a></div>
+	        <div class="webemail" tal:condition="not:context/footer/contact_form">Maintained by: <span tal:content="context/footer/contact_name" /></div>
+
+	    </address>
+
+	    <p class="copyright-footer">&copy; <span tal:define="now modules/DateTime/DateTime" tal:content="view/year"/> Rector and Visitors of the University of Virginia. All rights reserved.</p>
+
+	</div>
+
+</div>
+
+
+
+<tal:comment tal:condition="nothing">
+
+	This footer may be updated by editing the plone.app.layout.viewlets.footer.pt template 
+	in your theme's "template_overrides" directory. 
+	Any Plone viewlet or skin template my be similarly overriden.
+
+    STATIC CODE
+
+	<div class="footer-identity">
+		<div class="org">UVA Health System</div>
+		<div class="social-footer">
+			<a class="rss" href="" title="RSS"><span class="visuallyhidden">RSS</span></a>
+			<a class="facebook" href="" title="facebook"><span class="visuallyhidden">Facebook</span></a>
+			<a class="twitter" href="" title="twitter"><span class="visuallyhidden">Twitter</span></a>
+			<a class="email" href="" title="email"><span class="visuallyhidden">Email</span></a>
+			<a class="location" href="" title="location"><span class="visuallyhidden">Location</span></a>
+			<a class="phone" href="" title="phone"><span class="visuallyhidden">Phone</span></a>
+		</div>
+		<address class="address-footer">
+			<span class="street-address">1215 Lee Street</span>,
+	  		<span class="locality">Charlottesville</span>,
+	  		<span class="region">VA</span>
+	  		<span class="postal-code">22903</span>
+			<div class="tel">TEL: <span class="local"><a href="tel:4349243627">434.924.3627</a></span> |  TDD: <span class="tdd"><a href="tel:4349248357">434.924.8357</a></span></div>
+			<div class="webemail">Maintained by: <a href="#">Marketing &amp; Communications</a></div>
+		</address>
+		<address id="address-footer-edit"></address>
+		<p class="copyright-footer">
+			<span class="copyright">&#169; 2014 Rector and Visitors <br />of the University of Virginia. All rights reserved.</span>
+		</p>
+	</div>
+
+    DYNAMIC CODE
+
+	<div class="footer-identity">
+
+		<div class="org"><span tal:content="context/footer_heading" /></div>
+
+		<div class="social-footer">
+			<a class="rss" tal:condition="context/social_rss" tal:attributes="href string:${context/social_rss}" title="RSS"><span class="visuallyhidden">RSS</span></a>
+			<a class="facebook" tal:condition="context/social_facebook" tal:attributes="href string:${context/social_facebook}" title="facebook"><span class="visuallyhidden">Facebook</span></a>
+			<a class="google" tal:condition="context/social_google" tal:attributes="href string:${context/social_google}" title="google"><span class="visuallyhidden">Google+</span></a>
+			<a class="twitter" tal:condition="context/social_twitter" tal:attributes="href string:${context/social_twitter}" title="twitter"><span class="visuallyhidden">Twitter</span></a>
+			<a class="pinterest" tal:condition="context/social_pinterest" tal:attributes="href string:${context/social_pinterest}" title="pinterest"><span class="visuallyhidden">Pinterest</span></a>
+			<a class="youtube" tal:condition="context/social_youtube" tal:attributes="href string:${context/social_youtube}" title="youtube"><span class="visuallyhidden">YouTube</span></a>
+			<a class="email" tal:condition="context/social_email" tal:attributes="href string:${context/social_email}" title="email"><span class="visuallyhidden">Email</span></a>
+			<a class="location" tal:condition="context/social_location" tal:attributes="href string:${context/social_location}" title="location"><span class="visuallyhidden">Location</span></a>
+			<a class="phone" tal:condition="context/social_phone" tal:attributes="href string:${context/social_phone}" title="phone"><span class="visuallyhidden">Phone</span></a>
+		</div>
+
+	    <address class="address-footer">
+
+	        <div class="add">
+	            <span class="street-address" tal:content="context/address_street" />, 
+	            <span class="locality" tal:content="context/address_city" />, 
+	            <span class="region" tal:content="context/address_state" /> 
+	            <span class="postal-code" tal:content="context/address_zipcode" />
+	        </div>
+
+	        <div class="tel">
+	            <span class="local" tal:condition="context/phone_tel">TEL: <a href="#" tal:condition="context/phone_tel" tal:attributes="href string:tel:${context/phone_tel}"><span tal:content="context/phone_tel" /></a></span>
+	            <span class="fax" tal:condition="context/phone_fax">FAX: <a href="#" tal:condition="context/phone_fax" tal:attributes="href string:tel:${context/phone_fax}"><span tal:content="context/phone_fax" /></a></span>
+	            <span class="tdd" tal:condition="context/phone_tdd">TDD: <a href="#" tal:condition="context/phone_tdd" tal:attributes="href string:tel:${context/phone_tdd}"><span tal:content="context/phone_tdd" /></a></span>
+	        </div>
+
+	        <div class="webemail" tal:condition="context/contact_form">Maintained by: <a href="#" tal:condition="context/contact_form" tal:attributes="href string:${context/contact_form}"><span tal:content="context/contact_name" /></a></div>
+	        <div class="webemail" tal:condition="not:context/contact_form">Maintained by: <span tal:content="context/contact_name" /></div>
+
+	    </address>
+
+	    <p class="copyright-footer">&copy; <span tal:define="now modules/DateTime/DateTime" tal:content="view/year"/> Rector and Visitors of the University of Virginia. All rights reserved.</p>
+
+	</div>
+
+</tal:comment>

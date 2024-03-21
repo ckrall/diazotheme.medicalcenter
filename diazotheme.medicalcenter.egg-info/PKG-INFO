@@ -1,0 +1,28 @@
+Metadata-Version: 1.1
+Name: diazotheme.medicalcenter
+Version: 1.2.0.1
+Summary: UVAHS Medical Center 2015 - Diazo Theme
+Home-page: http://www.healthsystem.virginia.edu
+Author: HSTS Web Development Center
+Author-email: wdc-support@virginia.edu
+License: GPL version 2
+Description-Content-Type: UNKNOWN
+Description: Introduction
+        ============
+        
+        
+        
+        This product may contain traces of nuts.
+        
+        Changelog
+        =========
+        
+        0.0.1dev (unreleased)
+        ---------------------
+        
+        - Initial release
+        
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

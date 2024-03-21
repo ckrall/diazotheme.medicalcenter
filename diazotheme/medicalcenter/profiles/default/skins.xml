@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False" default_skin="diazotheme.medicalcenter">
+
+	<object name="medicalcenter_custom"
+		meta_type="Filesystem Directory View"
+		directory="diazotheme.medicalcenter:skins/medicalcenter_custom"/>
+		
+	<skin-path name="diazotheme.medicalcenter" based-on="Sunburst Theme">
+		<layer name="medicalcenter_custom" insert-after="custom"/>
+	</skin-path>
+
+</object>

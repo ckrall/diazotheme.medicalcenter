@@ -1,0 +1,108 @@
+/* IE Styles */
+.InHeaderPortletManager1.position-0 { margin-left:-98.87%; }
+#nav-global li { float:left; }
+#nav-global li a { margin:6px 12px 0; }
+#nav-primary ul#portal-globalnav li#portaltab-searchlink a { width:20px; }
+
+
+
+/*-----Primary Navigation All instances-------------*/
+#nav-primary ul#portal-globalnav li { float:left; }
+
+.site-patients #nav-primary ul#portal-globalnav li a { padding:12px 18px 12px 17px; }
+.site-cancer #nav-primary ul#portal-globalnav li a { padding:12px 13px 12px 13px; }
+.site-childrens #nav-primary ul#portal-globalnav li a { padding:12px 31px 12px 31px; }
+.site-heart #nav-primary ul#portal-globalnav li a { padding:12px 18px 12px 18px; }
+.site-neuro #nav-primary ul#portal-globalnav li a { padding:12px 18px 12px 18px; }
+
+.site-medicalcenter #nav-primary ul#portal-globalnav li a,
+.site-public #nav-primary ul#portal-globalnav li a,
+.site-internet #nav-primary ul#portal-globalnav li a { padding:12px 90px; }
+
+.site-pub #nav-primary ul#portal-globalnav li a,
+.site-intranet #nav-primary ul#portal-globalnav li a,
+.site-internal #nav-primary ul#portal-globalnav li a { padding:12px 72px; }
+
+.site-docs #nav-primary ul#portal-globalnav li a,
+.site-newdocs #nav-primary ul#portal-globalnav li a { padding:12px 72px; }
+
+
+
+/* FORMS */
+/* 1) Make inputs and buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button, input, select, textarea { width:auto; overflow:visible; margin:0; font-size:100%; font-family:sans-serif; vertical-align:baseline; }
+
+/* 1) Remove default scrollbar in IE: www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/
+   2) Align to text-top */
+textarea { overflow:auto; vertical-align:text-top; }
+
+
+
+/*-----Find a Doctor - Search Page------------------*/
+.character-wrap { float:left; width:auto; }
+
+
+
+/*-----Find a Doctor - Results Page-----------------*/
+span.IE { display:none; }
+#footer-nav-global li { float:left; }
+
+
+
+/*-----Patients Services - Home Page--------------*/
+#tabs-panel-widget-patients a.tab span.icon-active { margin-right:21px; }
+/*
+#tabs-panel-widget-patients a.tab-01 span.icon-active { margin-right:20px; }
+#tabs-panel-widget-patients a.tab-02 span.icon-active { margin-right:20px; }
+#tabs-panel-widget-patients a.tab-03 span.icon-active { margin-right:20px; }
+*/
+#tabs-panel-widget-patients .widget-panel { border:solid 1px #999999; border-top:none; }
+
+
+
+/*-----Children's Hospital - Home Page--------------*/
+
+.wrapper-banner-content { background:url(../images/bkgrnd-black-65.png) repeat top left; }
+#tabs-panel-widget .widget-panel { border:solid 1px #999999; border-top:none; }
+p.quote-content { margin-top:20px; }
+h2.tabs-label { margin-top:32px; }
+
+
+
+/* IE6/7 uses media, */
+@media, {
+	#nav-global li a { margin:6px 10px 0; }
+	#nav-primary ul#portal-globalnav li a { margin-right:20px; }
+	#portlets-above .cell .portlet-static-orange-nav ul li.expand a,
+	#portlets-above .cell .portlet-static-blue-nav ul li.expand a,
+	#portlets-above .cell .portlet-static-orange-nav ul li.expand a.open,
+	#portlets-above .cell .portlet-static-blue-nav ul li.expand a.open { background-image:none; }
+
+	#footer-nav-global li a { margin:6px 10px 15px 0; }
+
+}
+
+
+
+/* IE8 uses \0 */
+@media all\0 {
+	/*#nav-primary ul#portal-globalnav li a { margin-right:16px!important; }*/
+	/*.site-childrens #nav-primary ul#portal-globalnav li a { margin-right:6px!important; }*/
+
+}
+
+
+
+/* IE9 uses \9 */
+@media all and (monochrome:0) {
+	#tabs-panel-widget-patients a.tab span.icon-active { margin-right:20px; }
+
+}
+
+/*
+    #ie10,11 will only be red in MSIE 10,
+    both in high contrast (display setting) and default mode
+*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	#tabs-panel-widget-patients a.tab span.icon-active { margin-right:20px; }
+}

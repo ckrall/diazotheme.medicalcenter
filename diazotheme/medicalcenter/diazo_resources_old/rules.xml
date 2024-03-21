@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<!-- The default theme, used for standard Plone web pages -->
+	<theme href="/++theme++diazotheme.medicalcenter/index.html" />
+
+	<!--<theme href="/++theme++diazotheme.medicalcenter/home.html" css:if-content="body.template-homeview" />-->
+	<!--<theme href="/++theme++diazotheme.medicalcenter/landingpage.html" css:if-content="body.template-landingview" />-->
+
+	<theme href="/++theme++diazotheme.medicalcenter/index.html" css:if-content="body.site-medicalcenter" />
+	<theme href="/++theme++diazotheme.medicalcenter/index.html" css:if-content="body.site-public" />
+	<theme href="/++theme++diazotheme.medicalcenter/index.html" css:if-content="body.site-internet" />
+
+	<theme href="/++theme++diazotheme.medicalcenter/index.docs.per.patient.html" css:if-content="body.template-handout_view_patient" />
+	<theme href="/++theme++diazotheme.medicalcenter/index.docs.home.html" css:if-content="body.portaltype-dochome" />
+	<theme href="/++theme++diazotheme.medicalcenter/index.docs.html" css:if-content="body.site-docs" />
+	<theme href="/++theme++diazotheme.medicalcenter/index.intranet.html" css:if-content="body.site-newdocs" />
+	<theme href="/++theme++diazotheme.medicalcenter/index.intranet.html" css:if-content="body.site-pub" />
+	<theme href="/++theme++diazotheme.medicalcenter/index.intranet.html" css:if-content="body.site-intranet" />
+	<theme href="/++theme++diazotheme.medicalcenter/index.intranet.html" css:if-content="body.site-internal" />
+	<theme href="/++theme++diazotheme.medicalcenter/index.intranet.html" css:if-content="body.site-hsintranet" />
+
+	<notheme css:if-not-content="#visual-portal-wrapper" />
+
+	<!-- ensure that tinymce popups remain unstyled -->
+	<notheme if-path="presentation_view" /> 
+	<notheme if-path="source_editor.htm" /> 
+	<notheme if-path="ploneimage.htm" /> 		
+	<notheme if-path="anchor.htm" /> 
+	<notheme if-path="table.htm" /> 
+	<notheme if-path="attributes.htm" />
+
+	<!-- Dropping favicon from plone content. Theme adds favicon as link object in the HTML HEAD -->
+	<drop css:content="link[href$='favicon.ico']" />
+
+	<!-- Rules applying to a standard Plone web page -->
+	<rules css:if-content="#visual-portal-wrapper">
+
+		<!--HEAD-->
+		<replace css:theme="html head title" css:content="html head title" />
+		<replace css:theme="html head base" css:content="html head base" />
+		<!--add scripts such as analytics from site setup-->
+		<after css:content="#visual-portal-wrapper script" css:theme-children="body" />
+		<!--copy link, style, meta tags, scripts from Plone head-->
+		<before css:theme-children="html head" content="/html/head/link | /html/head/style | /html/head/meta | /html/head/script" />
+		<!--drop a few of Plone's css files since they conflict with custom css-->
+		<drop css:content="link[href*='public']" />
+		<drop css:content="link[href*='portlets']" />
+		<drop css:content="link[href*='reset']" />
+		<!--<drop css:content="link[href*='base']" />-->
+
+		<!--<drop css:content="script[src*='plone.app.jquery.js']" /> trying to see if i can drop plone's jquery -->
+
+
+
+		<!-- BODY (inject body classes from Plone into the theme) --> 
+		<copy attributes="*" css:theme="body" css:content="body" />
+
+
+
+		<!--TOP HEADER-->
+		<!--<replace attributes="href" css:content="#portal-header" css:theme="#wrapper-brand" />
+		<replace attributes="href" css:content-children="#portal-header" css:theme-children="#wrapper-brand" />-->
+		<replace css:content-children="#portal-header" css:theme-children="#portal-header" />
+		<replace css:content-children="#wrapper-global" css:theme-children="#wrapper-global" />
+		<replace css:content-children="#wrapper-brand" css:theme-children="#wrapper-brand" />
+		<replace css:content-children="#wrapper-identity" css:theme-children="#wrapper-identity" />
+		<replace css:content-children="#nav-primary" css:theme-children="#nav-primary" />
+		<replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" />
+
+		<!--manage portlet in top header for global nav-->
+		<!-- ORG <replace css:content="#portlets-in-header" css:theme="#portlets-in-header" /> -->
+		<!-- PAT <replace css:content=".InHeaderPortletManager1" css:theme="#portlets-in-header" /> <!- this pulls in contentwell portlet A only -->
+		<!-- PAT <replace css:content=".manageInHeaderPortletsLink" css:theme=".manageInHeaderPortletsLink" /> -->
+		
+		<!--logo (link target)--> 
+		<!--
+		<copy attributes="href" css:content="#portal-logo" css:theme=".site-logo" />
+		<copy attributes="href" css:content="#portal-logo" css:theme=".site-title" />
+		<replace css:content="#portal-logo" css:theme="#portal-logo" />
+		-->
+
+		<!-- phone numbers -->
+		<!--
+		<replace css:content=".InHeaderPortletManager6" css:theme="#portlet-phone" />
+		--> <!-- this pulls in contentwell portlet F only -->
+		
+
+		<!--primary nav site nav--> 
+		<!--
+		<replace css:theme-children="#portal-globalnav" css:content-children="#portal-globalnav" />
+		-->
+
+		<!--search box--> 
+		<!--<replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />--> 
+		<drop css:content=".searchSection" />
+		<drop css:content="#LSResult" />
+		<drop css:content="#portal-advanced-search" />
+
+		<replace css:content-children="#viewlet-above-content" css:theme-children="#viewlet-above-content" />
+		<!--<replace css:content="#portlets-above" css:theme="#portlets-above" />-->
+			<!--<replace css:content=".AbovePortletManager1" css:theme=".AbovePortletManager1" />
+			<replace css:content=".AbovePortletManager2" css:theme=".AbovePortletManager2" />
+			<replace css:content=".AbovePortletManager3" css:theme=".AbovePortletManager3" />
+			<replace css:content=".AbovePortletManager4" css:theme=".AbovePortletManager4" />
+			<replace css:content=".AbovePortletManager5" css:theme=".AbovePortletManager5" />
+			<replace css:content=".AbovePortletManager6" css:theme=".AbovePortletManager6" />-->
+		<!--<replace css:content=".managePortletsAboveLink" css:theme=".managePortletsAboveLink" />-->
+		<!--<replace css:content-children="#portal-breadcrumbs" css:theme-children="#portal-breadcrumbs" />-->
+		<replace css:content="#plone-lock-status" css:theme="#plone-lock-status" />
+
+
+
+		<!--CONTENT AREA-->
+		<replace css:content="#portal-columns" css:theme="#portal-columns" />
+		<replace css:content="#portal-column-content" css:theme="#portal-column-content" />
+		<replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" />
+			<!--
+			<replace css:content=".documentEditable" css:theme=".documentEditable" />
+				<replace css:content="#edit-bar" css:theme="#edit-bar" />
+				<replace css:content="#kssPortalMessage" css:theme="#kssPortalMessage" />
+				<replace css:content="#content" css:theme="#content" />
+					<replace css:content="#viewlet-above-content-title" css:theme="#viewlet-above-content-title" />
+					<replace css:content="#parent-fieldname-title" css:theme="#parent-fieldname-title" />
+					<replace css:content="#viewlet-below-content-title" css:theme="#viewlet-below-content-title" />
+					<replace css:content="#parent-fieldname-description" css:theme="#parent-fieldname-description" />
+					<replace css:content="#viewlet-above-content-body" css:theme="#viewlet-above-content-body" />
+					<replace css:content="#content-core" css:theme="#content-core" />
+					<replace css:content="#viewlet-below-content-body" css:theme="#viewlet-below-content-body" />
+			-->
+		<replace css:content="#portal-column-one" css:theme="#portal-column-one" />
+		<replace css:content="#portal-column-two" css:theme="#portal-column-two" />
+		<!--<drop css:content="#portal-column-one" />--><!-- drops entire column-one from view (disabling so it appears) -->
+
+
+		<!--HOME PAGE-->
+
+
+		<!--LANDING PAGE-->
+		<replace css:content="#feature-story" css:theme="#feature-story" />
+		<replace css:content="#feature-image" css:theme="#feature-image" />
+
+
+
+		<!--SIDE NAVIGATION-->
+		<replace css:content=".portletNavigationTree" css:theme=".portletNavigationTree" />
+
+
+
+		<!--FOOTER-->
+		<replace css:content="#portal-footer-content" css:theme="#portal-footer" />
+		<replace css:content="#portal-personaltools-wrapper" css:theme="#portal-siteactions" />
+		<replace css:content-children="#portal-footer" css:theme-children="#portal-footer-contact" />
+		<replace css:content-children="#footer-wrapper-global" css:theme-children="#footer-wrapper-global" /><!---->
+
+			<!--Manage Portlets in Footer-->
+			<replace css:content=".FooterPortletManager1" css:theme=".FooterPortletManager1" />
+			<replace css:content=".FooterPortletManager2" css:theme=".FooterPortletManager2" />
+			<replace css:content=".FooterPortletManager3" css:theme=".FooterPortletManager3" />
+			<replace css:content=".FooterPortletManager4" css:theme=".FooterPortletManager4" />
+			<replace css:content=".manageFooterPortletsLink" css:theme=".manageFooterPortletsLink" />
+
+			<!--Manage Portlet below Footer-->
+			<replace css:content=".BelowTitlePortletManager1" css:theme=".BelowTitlePortletManager1" />
+			<replace css:content=".managePortletsBelowTitleLink" css:theme=".managePortletsBelowTitleLink" />
+
+	</rules>
+</rules>

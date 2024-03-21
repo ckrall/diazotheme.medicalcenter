@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+
+<object>
+
+	<order manager="plone.htmlhead" skinname="diazotheme.medicalcenter">
+		<viewlet name="plone.htmlhead.title" /> 
+		<viewlet name="quintagroup.seoptimizer.customscript" /> 
+		<viewlet name="plone.resourceregistries" /> 
+		<viewlet name="quintagroup.seoptimizer.seotags" /> 
+	</order>
+
+	<order manager="plone.portaltop" skinname="diazotheme.medicalcenter">
+		<viewlet name="plone.header" /> 
+	</order>
+	<order manager="plone.portalheader" skinname="diazotheme.medicalcenter">
+		<viewlet name="diazotheme.viewlet_globalnav"/>
+		<viewlet name="diazotheme.viewlet_globalheader"/>
+		<viewlet name="plone.app.i18n.locales.languageselector" /> 
+		<viewlet name="collective.lineage.switcher" /> 
+		<viewlet name="plone.skip_links" /> 
+		<viewlet name="plone.logo" /> 
+		<viewlet name="plone.site_actions" /> 
+		<viewlet name="plone.personal_bar" /> 
+		<viewlet name="plone.searchbox" /> 
+		<viewlet name="plone.global_sections" /> 
+		<viewlet name="plone.path_bar" insert-after="plone.global_sections" /> 
+	</order>
+
+	<order manager="plone.abovecontent" skinname="diazotheme.medicalcenter">
+		<viewlet name="contentwellportlets.portletsabovecontent" /> 
+		<!-- <viewlet name="plone.path_bar" /> -->
+	</order>
+	<order manager="plone.contentviews" skinname="diazotheme.medicalcenter">
+		<viewlet name="plone.contentviews" /> 
+		<viewlet name="plone.contentactions" /> 
+	</order>
+	<order manager="plone.belowcontent" skinname="diazotheme.medicalcenter">
+		<viewlet name="plone.belowcontenttitle.keywords" /> 
+		<viewlet name="plone.nextprevious" /> 
+		<viewlet name="plone.manage_portlets_fallback" /> 
+	</order>
+	<order manager="plone.belowcontentbody" skinname="diazotheme.medicalcenter">
+		<viewlet name="plone.belowcontentbody.relateditems" /> 
+		<viewlet name="plone.abovecontenttitle.documentactions" /> 
+	</order>
+
+	<order manager="plone.portalfooter" skinname="diazotheme.medicalcenter">
+		<viewlet name="contentwellportlets.footerportlets" /> 
+		<viewlet name="plone.site_actions" /> 
+		<viewlet name="plone.personal_bar" /> 
+		<viewlet name="plone.footer" /> 
+		<viewlet name="plone.colophon" /> 
+	</order>
+
+
+<!-- ############################################################
+
+Below we are 'un-hiding' viewlets that we hidden previously and were unable to get back:
+
+Unhide a specific viewlet using the remove attribute (remove="True" attribute):
+
+<hidden manager="plone.portalfooter" skinname="MyCustomTheme">
+  <viewlet name="plone.personal_bar" remove="True" />
+</hidden>
+
+http://docs.plone.org/develop/addons/components/genericsetup.html#module-plone.app.viewletmanager.exportimport.storage
+
+ ############################################################ -->
+
+	<hidden manager="plone.portaltop" skinname="diazotheme.medicalcenter">
+		<viewlet name="diazotheme.viewlet_globalnav"/>
+		<viewlet name="plone.app.i18n.locales.languageselector" />
+		<viewlet name="plone.personal_bar" />
+		<viewlet name="plone.path_bar" />
+	</hidden>
+
+	<hidden manager="plone.portalheader" skinname="diazotheme.medicalcenter">
+		<viewlet name="diazotheme.viewlet_globalnav" remove="True" />
+		<viewlet name="diazotheme.viewlet_globalheader" remove="True" />
+		<viewlet name="diazotheme.viewlet_siteheader"/>
+		<viewlet name="plone.app.i18n.locales.languageselector" />
+		<viewlet name="plone.logo" />
+		<viewlet name="plone.site_actions" />
+		<viewlet name="plone.personal_bar" remove="True" />
+		<viewlet name="plone.searchbox" />
+		<viewlet name="plone.path_bar" remove="True" />
+	</hidden>
+	<hidden manager="plone.portalheader" skinname="Plone Default">
+		<viewlet name="plone.personal_bar" remove="True" />
+		<viewlet name="plone.searchbox" remove="True" />
+	</hidden>
+	<hidden manager="plone.portalheader" skinname="Plone Classic Theme">
+		<viewlet name="plone.personal_bar" remove="True" />
+		<viewlet name="plone.searchbox" remove="True" />
+	</hidden>
+	<hidden manager="plone.portalheader" skinname="Sunburst Theme">
+		<viewlet name="plone.personal_bar" remove="True" />
+		<viewlet name="plone.searchbox" remove="True" />
+	</hidden>
+
+	<hidden manager="plone.abovecontent" skinname="diazotheme.medicalcenter">
+		<viewlet name="plone.path_bar" />
+	</hidden>
+	<hidden manager="plone.belowcontent" skinname="diazotheme.medicalcenter">
+		<viewlet name="plone.belowcontenttitle.keywords" />
+	</hidden>
+
+	<hidden manager="plone.portalfooter" skinname="diazotheme.medicalcenter">
+		<viewlet name="plone.personal_bar" remove="True" />
+		<viewlet name="plone.colophon" remove="True" /> 
+	</hidden>
+
+</object>

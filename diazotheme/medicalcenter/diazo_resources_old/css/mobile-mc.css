@@ -1,0 +1,330 @@
+/* = Media queries for CFM Apps
+------------------------------------------------------------ */
+
+/* mobile styles - internet, intranet, and docs */
+/*@import url("/++theme++diazotheme.medicalcenter/++resource++Products.medicalcenter/types-mobile.css");*/
+
+
+/* Landscape Tablets -----------
+(e.g. Apple iPad 2-3rd, mini) Size: 1024x768, Ratio: 4:3 */
+@media only screen
+and (max-width:1024px) {
+	/*Global Navigation*/
+	#portlets-in-header, #nav-global { min-width:100%; }
+	#nav-global ul { width:100%; }
+		#nav-global li a { display:block; margin-top:6px; padding:4px 5px 10px 5px; padding:0.4rem 0.5rem 1rem 0.5rem; }
+
+	/*Header Banner*/
+	header, #wrapper-brand { min-width:100%; }
+		#wrapper-identity { width:100%; }
+
+	/*phone tab slidingDiv*/
+	#slidingDiv .cell .portletNumber-3 { right:25px; }
+
+	/*******-webkit-flex:; -moz-box-flex:; -ms-flex:; ****/
+
+	/*Cross-Site Primary Navigation*/
+	#nav-primary { width:100%; }
+	#nav-primary ul#portal-globalnav { margin:0 10px; }
+	#nav-primary ul#portal-globalnav li { webkit-flex:0 0 13%; -moz-box-flex:0 0 13%; -ms-flex:0 0 13%; flex:0 0 13%; }
+	#nav-primary ul#portal-globalnav li:last-child a { margin:0; }
+
+	/* IntErnet Specific Primary Nav */
+	.site-internet #nav-primary ul#portal-globalnav li#portaltab-departments-services { -webkit-flex:0 0 28%; -moz-box-flex:0 0 28%; -ms-flex:0 0 28%; flex:0 0 28%; }
+	.site-internet #nav-primary ul#portal-globalnav li#portaltab-people { -webkit-flex:0 0 12%; -moz-box-flex:0 0 12%; -ms-flex:0 0 12%; flex:0 0 12%; }
+	.site-internet #nav-primary ul#portal-globalnav li#portaltab-knowledgelink { -webkit-flex:0 0 18%; -moz-box-flex:0 0 18%; -ms-flex:0 0 18%; flex:0 0 18%; }
+	.site-internet #nav-primary ul#portal-globalnav li#portaltab-mylink { -webkit-flex:0 0 11%; -moz-box-flex:0 0 11%; -ms-flex:0 0 11%; flex:0 0 11%; }
+	.site-internet #nav-primary ul#portal-globalnav li#portaltab-searchlink { -webkit-flex:0 0 3%; -moz-box-flex:0 0 3%; -ms-flex:0 0 3%; flex:0 0 3%; }
+
+	/* IntrAnet Specific Primary Nav */
+	.site-pub #nav-primary ul#portal-globalnav li#portaltab-departments-services { -webkit-flex:0 0 28%; -moz-box-flex:0 0 28%; -ms-flex:0 0 28%; flex:0 0 28%; }
+	.site-pub #nav-primary ul#portal-globalnav li#portaltab-people { -webkit-flex:0 0 12%; -moz-box-flex:0 0 12%; -ms-flex:0 0 12%; flex:0 0 12%; }
+	.site-pub #nav-primary ul#portal-globalnav li#portaltab-knowledgelink { -webkit-flex:0 0 18%; -moz-box-flex:0 0 18%; -ms-flex:0 0 18%; flex:0 0 18%; }
+	.site-pub #nav-primary ul#portal-globalnav li#portaltab-mylink { -webkit-flex:0 0 11%; -moz-box-flex:0 0 11%; -ms-flex:0 0 11%; flex:0 0 11%; }
+	.site-pub #nav-primary ul#portal-globalnav li#portaltab-searchlink { -webkit-flex:0 0 3%; -moz-box-flex:0 0 3%; -ms-flex:0 0 3%; flex:0 0 3%; }
+
+	/* Docs Specific Primary Nav */
+	.site-docs #nav-primary ul#portal-globalnav li#portaltab-portaltab-manuals { -webkit-flex:0 0 20%; -moz-box-flex:0 0 20%; -ms-flex:0 0 20%; flex:0 0 20%; }
+	.site-docs #nav-primary ul#portal-globalnav li#portaltab-tch { -webkit-flex:0 0 25%; -moz-box-flex:0 0 25%; -ms-flex:0 0 25%; flex:0 0 25%; }
+	.site-docs #nav-primary ul#portal-globalnav li#portaltab-downtime { -webkit-flex:0 0 25%; -moz-box-flex:0 0 25%; -ms-flex:0 0 25%; flex:0 0 25%; }
+	.site-docs #nav-primary ul#portal-globalnav li#portaltab-per { -webkit-flex:0 0 25%; -moz-box-flex:0 0 25%; -ms-flex:0 0 25%; flex:0 0 25%; }
+	.site-docs #nav-primary ul#portal-globalnav li#portaltab-searchlink { -webkit-flex:0 0 10%; -moz-box-flex:0 0 10%; -ms-flex:0 0 10%; flex:0 0 10%; }
+
+
+	/*Mega Menu*/
+	#portlets-above .cell { width:94%; margin:-0.3rem 1rem 0px; }
+	#portlets-above .cell .portletNumber-0,
+	#portlets-above .cell .portletNumber-1,
+	#portlets-above .cell .portletNumber-2 {  }
+
+	/*Portal Column Content Areas*/
+	#portal-breadcrumbs { margin-left:1rem; }
+	#portal-columns { min-width:100%; }
+
+	#portal-column-content.width-3\:4 { width:58%!important; }
+	#portal-column-two, #portal-column-two.sr { margin-left:-40%!important; width:40%!important; }
+	#portal-column-two.sl.sr { margin-left:-24.38%!important; width:22.75%!important; }
+
+	/*pub site*/
+	/*#portal-column-content.position-1\:4 { margin-left:-75%!important; width:50%!important; }
+	#portal-column-content.position-0 { margin-left:-99%!important; width:70%!important; }
+	#portal-column-two { margin-left:-25%!important; width:25%!important; }*/
+
+	/* CFM Apps */
+	.wrapper-content { width:100% }
+		.main-content { width:60%}
+			.section-content { padding:1.2rem 1rem; }
+		.aside-content { width:39%; }
+		/*find a doctor*/
+		#doctorSearch { width:94%; }
+		#physicianCards .profileDetails { float:none!important; width:350px!important; } /*related doctor search portlet in PLONE */
+
+	/* Pateients Home Page - imported from: */
+	/* @import url("/++theme++diazotheme.healthsystem/++resource++Products.healthsystemtypes/types-mobile.css"); */
+
+	/* Children's Home Page: imported from: */
+	/* @import url("/++theme++diazotheme.healthsystem/++resource++Products.healthsystemtypes/types-mobile.css"); */
+
+
+	/* Childrens Landing Page */
+	#landing_page_childrens #feature-wrapper { width:100%; }
+		/* feature section */
+		.col-3 .sub-col,
+		.col-4 .sub-col { width:50%; }
+		.col-4 .sub-col .image-right,
+		.col-4 .sub-col .image-left { float:none; }
+
+		#feat-sect-3 { clear:both; }
+
+	/*Footer - DoorMat*/
+	#portal-wrapper-inside { min-width:100%; }
+		#portal-footer-contact { padding:3rem 0rem 3rem 1.5rem; }
+	/*	#portlets-footer { padding:5.5rem 4rem 3rem 1rem; width:60rem; } */
+
+	/* Footer Global Navigation */
+	#footer-nav-global { min-width:100%; }
+		#footer-nav-global ul { width:100%; }
+		#footer-nav-global li a { display:block; border:1px solid transparent;
+								 margin:6px 0 15px; padding:4px 5px 6px 5px; padding:0.4rem 0.5rem 0.6rem 0.5rem; }
+
+	/* Landing Pages */
+	#feature-wrapper { width:100%; }
+	#feature-story { padding:0 10px 20px; }
+	#landing_page_center div.feat-img { margin:0; width:100%; }
+	/*div.feat-img img { width:100%; height:auto; }
+	div.section-1-img img { width:100%; height:auto; }
+	div.section-2-img img { width:100%; height:auto; }*/
+
+}
+
+/* Portrait Tablets and Mini's ----------- */
+@media only screen
+and (max-width:800px) {
+
+	#portlets-in-header, #nav-global { /*min-width:76.8rem;*/ min-width:100%; }
+	.title-site { margin-left:5rem; }
+		.site-docs .title-site { font-size:3rem; }
+
+	/*phone tab slidingDiv*/
+	#slidingDiv .cell .portletWrapper .portletItem p a { font-size:2rem; }
+	#slidingDiv .cell .portletNumber-3 { right:40px; }
+
+	/* Primary Navigation */
+
+	#nav-primary ul#portal-globalnav li { font-size:1.2rem; }
+		#nav-primary ul#portal-globalnav li#portaltab-searchlink a { background-position: 50% 50%; }
+
+	/*Mega Menu*/
+	#portlets-above .cell { width:92%; }
+	#portlets-above .cell .portletNumber-0,
+	#portlets-above .cell .portletNumber-1,
+	#portlets-above .cell .portletNumber-2 { width:30%; }
+
+	/* CONTENT area */
+	#portal-column-content, #portal-column-content.width-3\:4 { margin-left:-98%!important; width:98%!important; }
+		#content-core { padding:0; }
+
+	#portal-column-content.cell,
+	#portal-column-two.cell { float:none; clear:both; }
+
+	#portal-column-one,
+	#portal-column-two { margin-left:-98%!important; width:94%!important; }
+
+	/*pub site - overriding 1024 specs*/
+	#portal-column-content, #portal-column-content.width-3\:4, #portal-column-content.position-1\:4 { margin-left:-99%!important; width:60%!important; }
+	#portal-column-content.width-1\:2,
+	#portal-column-content.position-0 { margin-left:-98%!important; width:98%!important; }
+	#portal-column-two.sr,
+	#portal-column-two.sl.sr { margin-left:-98%!important; width:97%!important; }
+
+	/*#content ul { margin-left:0; padding-left:20px; }*/
+
+	/* portlet icons */
+	.portletTopRight { right:0!important; }
+
+	/*pullquotes*/
+	#content .callout,
+	#content .butterfly,
+	#content .pullquote { float:none; width:69%; }
+		#content .callout.box-right,
+		#content .butterfly.box-right,
+		#content .pullquote.pullRight { margin:2rem 0; float:none; }
+		#content .callout.box-full,
+		#content .butterfly.box-full,
+		#content .pullquote.pullFull { margin:2rem 0; width:69%; }
+
+	/* CFM Apps */
+		/*find a doctor*/
+		#doctorSearch { width:91.5%; }
+		.main-content { width: 99%; }
+		.aside-content { float:none; width:97%; clear:both; padding-top:0; margin-left:10px; }
+
+	/* Landing Page */
+	div.feat-img { margin:2rem 0 2rem 0; float:none; width:auto; max-height:auto; }
+
+	/* Feature Page */
+	.portaltype-products-healthsystemtypes-pagefeature .feature-image { width:100%; float:none; margin:2rem 0 2rem 0; }
+
+	/*Footer - DoorMat*/
+	#portal-wrapper-inside { /*min-width:76.8rem;*/ min-width:100%; }
+		/*#portal-footer-contact { width:40%; }	*/
+		#portal-footer { float:none; width:100%; }
+		#portal-wrapper-inside { min-width:100%; }
+			/*#portlets-footer { width:50%; background:red; }*/
+			#portlets-footer .cell { width:50%; }
+				div.cell.FooterPortletManager1.position-0 { margin-left:-95.875%; }
+				div.cell.FooterPortletManager2.position-1\:4 { margin-left:-50%; }
+				div.cell.FooterPortletManager3 { clear:both; }
+					div.cell.FooterPortletManager3.position-1\:2 { margin-top:20px; margin-left:-95.875%; }
+				div.cell.FooterPortletManager4 {  }
+					div.cell.FooterPortletManager4.position-3\:4 { margin-top:20px; margin-left:-50%; }
+			#portal-siteactions { position:static; }
+
+		span.local, span.fax, span.tdd { display:block; padding:0; border:none; }
+
+	/* Footer Global Nav
+	#footer-nav-global ul li { text-align:left; }*/
+
+}
+
+/* Landscape Phones and Smaller ----------- */
+@media only screen
+and (max-width: 640px) {
+	#wrapper-global { display:none; }
+	header { /*min-width:640px;*/ }
+	#wrapper-brand { min-width:100% }
+	#wrapper-identity { width:100%;  }
+		.site-logo { position:relative; z-index:2; }
+		.logo-site { margin:1rem 0 1rem 1rem; width:140px; height:50px; }
+		.title-site { margin:0; color:/*#8A8A8A*/#000000; font-size:2rem; font-family:Georgia, serif; }
+			.site-title { display:block; float:left; width:100%; background-color:#FFFFFF; padding:1rem; border:none; }
+				.site-title:hover { border:none; }
+
+	#site-utility { top:1.6rem; right:6rem; z-index:1; }
+	#site-utility a.tab { display:none; }
+	.mobile { display:block; text-align:right; font-size:1.8rem; font-family:Georgia, serif; color:#FFFFFF; }
+		.site-pub .mobile, .site-docs .mobile { color:#000000; }
+	a[href^=tel]{ color:#007ed9; text-decoration:none; border:none; cursor:pointer; }
+	.slicknav_menu { display:block; padding:0; background:transparent; }
+		.slicknav_btn { top:1.4rem; background-color:transparent; border-radius:0; margin:0; text-decoration:none; text-shadow:none; border:none; border-left:1px solid #FFFFFF; }
+			.site-pub .slicknav_btn, .site-docs .slicknav_btn { border-color:#000000; }
+			.slicknav_btn:hover { border-bottom:none; }
+		.slicknav_menu .slicknav_icon-bar { height:0.3em; width:1.9em; }
+		.site-pub .slicknav_menu .slicknav_icon-bar, .site-docs .slicknav_menu .slicknav_icon-bar { background-color:#7D7D7D; }
+	#nav-primary { display:none; }
+	#nav-primary ul#portal-globalnav li#portaltab-make-an-appointment { display:inline; }
+
+	#portal-breadcrumbs { display:none; }
+
+	/* content area */
+	#portlets-in-header, #nav-global { /*min-width:64.0rem;*/ }
+	#footer-nav-global { /*min-width:64.0rem;*/ }
+	#portal-columns { min-width:100%; }
+
+	/* portlet icons */
+	.portletTopRight { right:20px!important; }
+
+	/* Landing Pages */
+	div.section-1-img,
+	div.section-2-img { float:none; }
+
+	/* Portlets Below Content - Content Well */
+	#portlets-below div.cell { float:none; }
+	#portlets-below div.width-1\:2 { width:98.975%; }
+	#portlets-below .position-1\:2 { margin-left:-99.875%; }
+
+	/* Footer */
+	#portal-personaltools-wrapper { display:none; }
+	.site-pub #portal-personaltools-wrapper, .site-docs #portal-personaltools-wrapper { display:block; }
+
+}
+
+/* Landscape Phones and Smaller ----------- */
+@media only screen
+and (max-width : 480px) {
+
+	/* content area */
+	header { min-width:320px; }
+	.site-title { }
+	#portal-columns { min-width:320px; }
+
+	/* CFM Apps */
+		/*find a doctor*/
+		#findDoctorSearch, #browseDoc { padding:3rem 1rem; }
+		#doctorSearch { width:89%; }
+		#advancedInner { padding:0 0 0 2rem; }
+			.profilecardLarge .docsName { font-size:2rem; }
+			.profilecardLarge .contact { font-size:1.2rem; }
+
+	/* footer */
+	#portal-wrapper-inside { width:100%; }
+	#portal-footer-contact { width:96%; padding-bottom:0; }
+	/*#portlets-footer .cell { width:40rem; }*/
+	#portlets-footer { width:100%; padding-top:2rem; }
+
+	/* global footer navigation */
+	#footer-nav-global { min-width:320px; }
+	/* Footer Global Navigation */
+	#footer-nav-global { min-width:100%; }
+		#footer-nav-global ul { width:100%;
+		  -webkit-flex-flow:nowrap column;
+		  -moz-flex-flow:nowrap column;
+		  -ms-flex-flow:nowrap column;
+		  flex-flow:nowrap column;
+		  }
+		#footer-nav-global ul li { float:none; }
+
+}
+
+/* and Smaller ----------- */
+@media only screen
+and (max-width : 320px) {
+
+	.logo-site { width:60%; height:auto; }
+
+	#content .callout,
+	#content .pullquote { width:66%; }
+		#content .pullquote.pullFull { width:66%; }
+
+	/* portlet icons */
+	.portletTopRight { right:0!important; }
+
+
+	/* Landing Page */
+	div.section-1-lst,
+	div.section-2-lst { float:none; }
+		.col-4 .sub-col,
+		.col-3 .sub-col,
+		.col-2 .sub-col,
+		.col-1 .sub-col,
+		div.sect-list { width:100%; }
+
+
+	/* footer */
+	#portlets-footer { padding-top:0; }
+	div.cell.FooterPortletManager1.position-0,
+	div.cell.FooterPortletManager3.position-1\:2,
+	div.cell.FooterPortletManager2.position-1\:4,
+	div.cell.FooterPortletManager4.position-3\:4 { clear:both; margin-top:1rem; margin-left:-94.875%; }
+
+}

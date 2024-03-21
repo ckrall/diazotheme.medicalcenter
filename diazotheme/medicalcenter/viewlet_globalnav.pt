@@ -1,0 +1,14 @@
+<div class="wrapper" id="wrapper-global">
+	<nav class="nav" id="nav-global">
+
+		<div id="portlets-in-header">
+			<div class="portletWrapper portlet-global-nav">
+				<div class="portlet-static-global-nav">
+					<div tal:content="structure context/globalnav/@@text-transform/header_globalnav/text" 
+						 tal:omit-tag="not:context/globalnav/header_globalnav" />
+				</div>
+			</div>
+		</div>
+
+	</nav>
+</div>

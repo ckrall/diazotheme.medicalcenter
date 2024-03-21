@@ -1,0 +1,17 @@
+diazotheme.medicalcenter Installation
+-------------------------------------
+
+To install diazotheme.medicalcenter using zc.buildout and the plone.recipe.zope2instance
+recipe to manage your project, you can do this:
+
+* Add ``diazotheme.medicalcenter`` to the list of eggs to install, e.g.:
+
+    [buildout]
+    ...
+    eggs =
+        ...
+        diazotheme.medicalcenter
+       
+* Re-run buildout, e.g. with:
+
+    $ ./bin/buildout

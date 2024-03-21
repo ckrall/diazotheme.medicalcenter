@@ -1,0 +1,62 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="diazotheme.test">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <!--
+  <include package=".browser" />
+  -->
+
+  <genericsetup:registerProfile
+      name="default"
+      title="UVAHS Medical Center Theme - Diazo"
+      directory="profiles/default"
+      description="Extension profile for Medical Center Diazo Theme (2015)"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <plone:static
+    directory="diazo_resources"
+    type="theme"
+    />
+
+  <cmf:registerDirectory name="medicalcenter_custom"/>
+
+  <browser:jbot
+      directory="template_overrides"
+      layer=".interfaces.ICustomTheme"
+      />
+
+  <!-- The uva menu (global nav at top of page) -->
+  <browser:viewlet
+      name="diazotheme.viewlet_globalnav"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      template="viewlet_globalnav.pt"
+      layer=".interfaces.ICustomTheme"
+      permission="zope2.View"
+      />
+
+  <!-- The header (header area) -->
+  <browser:viewlet
+      name="diazotheme.viewlet_globalheader"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      template="viewlet_globalheader.pt"
+      layer=".interfaces.ICustomTheme"
+      permission="zope2.View"
+      />
+
+  <!-- The breadcrumbs (move to header) -->
+  <browser:viewlet
+      name="plone.path_bar"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class="plone.app.layout.viewlets.common.PathBarViewlet"
+      permission="zope2.View"
+      />
+
+</configure>

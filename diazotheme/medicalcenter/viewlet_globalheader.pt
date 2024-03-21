@@ -1,0 +1,51 @@
+<div id="wrapper-brand" class="brand wrapper">
+
+<div id="wrapper-identity">
+
+	<a tal:condition="context/header/header_logo" class="site-logo" href="/">
+		<img tal:attributes="src string:${context/absolute_url}/header/@@images/header_logo" class="logo-site" title="University of Virginia Health System" alt="University of Virginia Health System">
+	</a>
+
+	<div id="site-utility"> 
+		<a href="#" id="phone" class="tab show_hide" rel="#slidingDiv"></a>
+		<span class="mobile"> 434.924.0211 </span>
+<!--
+		<div id="slidingDiv">
+			<div class="PHONE">
+				<div tal:condition="context/header/header_phonenumber_left" 
+					 tal:content="structure context/header/@@text-transform/header_phonenumber_left/text" 
+					 tal:omit-tag="not:context/header/header_phonenumber_left" />
+
+				<div tal:condition="context/header/header_phonenumber_center" 
+					 tal:content="structure context/header/@@text-transform/header_phonenumber_center/text" 
+					 tal:omit-tag="not:context/header/header_phonenumber_center" />
+
+				<div tal:condition="context/header/header_phonenumber_right" 
+					 tal:content="structure context/header/@@text-transform/header_phonenumber_right/text" 
+					 tal:omit-tag="not:context/header/header_phonenumber_center" />
+
+				<div tal:condition="context/header/header_phonenumber_more" 
+					 tal:content="structure context/header/header_phonenumber_more" 
+				 	 tal:omit-tag="not:context/header/header_phonenumber_more" />
+			</div>
+			<a href="#" class="closephone">
+				Close [X] 
+			</a>
+		</div>
+-->
+	</div>
+
+	<div id="mobileMenu"><!-- --></div>
+
+	<a class="site-title" href="/">
+		<span tal:content="context/header/header_label" class="title-site">
+			HEADER LABEL
+		</span>
+	</a>
+
+
+
+<tal:comment replace="nothing">
+	NOTES:
+
+</tal:comment>
